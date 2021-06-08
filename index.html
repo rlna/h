@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>experiment</title>
+    <meta name="description" content="main site">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component"></script>
     <!-- <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js">
@@ -17,10 +18,18 @@
         <img id="bg" src="cc1.jpg"/>
       </a-assets>
       <!-- in meters. right hand coordinate system -->
-      <a-box src="#bg"
-              width="4" height="4" depth="4"
-              position="-2 1.5 -9">
-      </a-box>
+      <a-sphere
+              src="#bg"
+              link="href: cc1.html;
+                  title: My Homepage;
+                  image: #bg"
+              side="double"
+              radius="3"
+              position="-6 1.5 -9"
+              event-set__enter="_event: mouseenter; color: #dbdbdb"
+              event-set__leave="_event: mouseleave; color: #ffffff"
+                >
+      </a-sphere>
         <!-- <a-sphere position="0 -34 0"
                   radius="35"
                   color="#EF2D5E"
