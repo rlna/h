@@ -12,9 +12,21 @@
     <a-scene>
       <a-assets>
         <img id="bg" src="cc1.jpg"/>
+        <img id="moss" src="moss.tif"/>
+        <img id="mnrm" src="moss_norm.tif"/>
       </a-assets>
 
       <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+
+      <!-- Ground -->
+      <a-plane material="color:#FFFFFF;
+                          src=#moss;
+                          repeat:5 5;
+                          normal-map: #mnrm;
+                          normal-texture-repeat: 5 5" 
+              rotation ="-90 0 0"
+              scale = "10 10 1">
+      </a-plane>
 
       <!-- in meters. right hand coordinate system -->
       <a-sphere
