@@ -12,18 +12,18 @@
     <a-scene>
       <a-assets>
         <img id="bg" src="cc1.jpg"/>
-        <img id="moss" src="moss.tif"/>
-        <img id="mnrm" src="moss_norm.tif"/>
+        <img id="moss" src="moss.jpg"/>
+        <img id="mnrm" src="moss_norm.jpg"/>
       </a-assets>
 
       <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
 
       <!-- Ground -->
       <a-plane material="color:#FFFFFF;
-                          src=#moss;
+                          src:#moss;
                           repeat:5 5;
                           normal-map: #mnrm;
-                          normal-texture-repeat: 5 5" 
+                          normal-texture-repeat: 5 5"
               rotation ="-90 0 0"
               scale = "10 10 1">
       </a-plane>
