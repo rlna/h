@@ -29,6 +29,10 @@
     <a-scene>
       <a-assets>
         <img id="bg" src="portals/img/bg.jpg"/>
+        <img id="cc1" src="portals/img/scc1.jpg"/>
+        <img id="mt" src="portals/img/smt.jpg"/>
+        <img id="tp" src="portals/img/stp.jpg"/>
+        <img id="cow" src="portals/img/scow.jpg"/>
         <img id="play" src="play.png"/>
         <img id="pause" src="pause.png"/>
         <img id="moss" src="texture/moss.jpg"/>
@@ -62,7 +66,7 @@
       <a-video src="#sk"
              width="16"
              height="9"
-             position="0 8 -12">
+             position="0 8 12">
              <a-image id="videoControls"
                     src="#play"
                     position="0 -6 0"
@@ -75,6 +79,63 @@
                     position="0 -7 0">
              </a-text>
       </a-video>
+
+      <a-plane color="#FFFFFF"
+               scale="100 100 1"
+               position="0 0 0"
+               rotation="-90 0 0"
+               side="double">
+        </a-plane>
+
+        <!-- in meters. right hand coordinate system -->
+        <a-sphere
+                src="#cc1"
+                link="href: cc1.html;
+                    title: My Homepage;
+                    image: #cc1"
+                side="double"
+                radius="3"
+                position="-6 2 -15"
+                event-set__enter="_event: mouseenter; color: #dbdbdb"
+                event-set__leave="_event: mouseleave; color: #ffffff"
+                  >
+        </a-sphere>
+        <a-sphere
+                src="#tp"
+                link="href: tp.html;
+                    title: My Homepage;
+                    image: #tp"
+                side="double"
+                radius="3"
+                position="6 2 -15"
+                event-set__enter="_event: mouseenter; color: #dbdbdb"
+                event-set__leave="_event: mouseleave; color: #ffffff"
+                  >
+        </a-sphere>
+        <a-sphere
+                src="#cow"
+                link="href: cow.html;
+                    title: My Homepage;
+                    image: #cow"
+                side="double"
+                radius="3"
+                position="15 2 -8"
+                event-set__enter="_event: mouseenter; color: #dbdbdb"
+                event-set__leave="_event: mouseleave; color: #ffffff"
+                  >
+        </a-sphere>
+        <a-sphere
+                src="#mt"
+                link="href: mt.html;
+                    title: My Homepage;
+                    image: #mt"
+                side="double"
+                radius="3"
+                position="-15 2 -8"
+                event-set__enter="_event: mouseenter; color: #dbdbdb"
+                event-set__leave="_event: mouseleave; color: #ffffff"
+                  >
+        </a-sphere>
 
 
 
