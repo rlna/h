@@ -3,7 +3,7 @@
   <head>
     <title>experiment</title>
     <meta name="description" content="main site">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   </head>
 
   <body>
@@ -16,29 +16,31 @@
         <img id="m_dm" src="moss_height.jpg"/>
       </a-assets>
 
-      <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
-
-
       <a-sky src="#bg"></a-sky>
-      <a-plane material="color:#FFFFFF;
-                        src: #moss;
-                        repeat: 5000 5000;
-                        ambientocclusionmap: #mao;
-                        ambient-occlusion-texture-repeat: 5000 5000;
-                        displacement-map: #mdm;
-                        displacement-scale: 0.3;
-                        displacement-texture-repeat: 5000 5000;
-                        normal-map: #mnrm;
-                        normal-texture-repeat: 5000 5000;
-                        roughness: 1
-                          "
-               scale="10000 10000 1"
+      <a-plane color="#FFFFFF"
                position="0 0 0"
                rotation="-90 0 0"
                side="double">
         </a-plane>
+      <!-- <a-plane material="color:#FFFFFF;
+                        src: #moss;
+                        repeat: 500 500;
+                        ambientocclusionmap: #mao;
+                        ambient-occlusion-texture-repeat: 500 500;
+                        displacement-map: #mdm;
+                        displacement-scale: 0.3;
+                        displacement-texture-repeat: 500 500;
+                        normal-map: #mnrm;
+                        normal-texture-repeat: 500 500;
+                        roughness: 1
+                          "
+               scale="1000 1000 1"
+               position="0 0 0"
+               rotation="-90 0 0"
+               side="double">
+        </a-plane> -->
       <!-- in meters. right hand coordinate system -->
-      <a-sphere
+      <!-- <a-sphere
               src="#bg"
               link="href: cc1.html;
                   title: My Homepage;
@@ -49,7 +51,7 @@
               event-set__enter="_event: mouseenter; color: #dbdbdb"
               event-set__leave="_event: mouseleave; color: #ffffff"
                 >
-      </a-sphere>
+      </a-sphere> -->
         <!-- <a-sphere position="0 -34 0"
                   radius="35"
                   color="#EF2D5E"
