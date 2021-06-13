@@ -4,7 +4,6 @@
     <title>experiment</title>
     <meta name="description" content="main site">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
   </head>
 
@@ -20,6 +19,7 @@
         <img id="m_nrm" src="texture/moss_norm.jpg"/>
         <img id="m_ao" src="texture/moss_ao.jpg"/>
         <img id="m_dm" src="texture/moss_height.jpg"/>
+        <video id="sk" src="sean.mp4"/>
       </a-assets>
 
       <a-sky src="#bg"></a-sky>
@@ -41,11 +41,11 @@
                side="double">
         </a-plane>
 
-      <a-plane scale="15 15 1"
-             position="0 0 -15"
-             rotation="0 0 0"
-             side="double">
-      </a-plane>
+      <a-video src="#sk"
+             width="16"
+             height="9"
+             position="0 0 -20">
+      </a-video>
 
     </a-scene>
 
