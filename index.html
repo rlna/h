@@ -10,11 +10,15 @@
   <body>
     <a-scene>
       <a-assets>
-        <img id="bg" src="bg.jpg"/>
-        <img id="moss" src="moss.jpg"/>
-        <img id="m_nrm" src="moss_norm.jpg"/>
-        <img id="m_ao" src="moss_ao.jpg"/>
-        <img id="m_dm" src="moss_height.jpg"/>
+        <img id="bg" src="places/img/bg.jpg"/>
+        <img id="cc1" src="places/img/cc1.jpg"/>
+        <img id="mt" src="places/img/mt.jpg"/>
+        <img id="tp" src="places/img/tp.jpg"/>
+        <img id="cow" src="places/img/cow.jpg"/>
+        <img id="moss" src="texture/moss.jpg"/>
+        <img id="m_nrm" src="texture/moss_norm.jpg"/>
+        <img id="m_ao" src="texture/moss_ao.jpg"/>
+        <img id="m_dm" src="texture/moss_height.jpg"/>
       </a-assets>
 
       <a-sky src="#bg"></a-sky>
@@ -38,8 +42,8 @@
 
       <!-- in meters. right hand coordinate system -->
       <a-sphere
-              src="#bg"
-              link="href: cc1.html;
+              src="#cc1"
+              link="href: places/cc1.html;
                   title: My Homepage;
                   image: #bg"
               side="double"
@@ -50,7 +54,7 @@
                 >
       </a-sphere>
       <a-sphere
-              src="#fh"
+              src="#tp"
               link="href: fh.html;
                   title: My Homepage;
                   image: #bg"
@@ -62,7 +66,7 @@
                 >
       </a-sphere>
       <a-sphere
-              src="#fh"
+              src="#cow"
               link="href: fh.html;
                   title: My Homepage;
                   image: #bg"
@@ -74,7 +78,7 @@
                 >
       </a-sphere>
       <a-sphere
-              src="#fh"
+              src="#mt"
               link="href: fh.html;
                   title: My Homepage;
                   image: #bg"
