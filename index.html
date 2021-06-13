@@ -13,21 +13,32 @@
       <a-assets>
         <img id="bg" src="cc1.jpg"/>
         <img id="moss" src="moss.jpg"/>
-        <img id="mnrm" src="moss_norm.jpg"/>
+        <img id="m_nrm" src="moss_norm.jpg"/>
+        <img id="m_ao" src="moss_ao.jpg"/>
+        <img id="m_dm" src="moss_height.jpg"/>
       </a-assets>
 
       <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
 
-      <!-- Ground -->
-      <a-plane material="color:#FFFFFF;
-                          src:#moss;
-                          repeat:5 5;
-                          normal-map: #mnrm;
-                          normal-texture-repeat: 5 5"
-              rotation ="-90 0 0"
-              scale = "10 10 1">
-      </a-plane>
 
+      <a-sky src="#bg"></a-sky>
+      <a-plane material="color:#FFFFFF;
+                        src: #moss;
+                        repeat: 5000 5000;
+                        ambientocclusionmap: #mao;
+                        ambient-occlusion-texture-repeat: 5000 5000;
+                        displacement-map: #mdm;
+                        displacement-scale: 0.3;
+                        displacement-texture-repeat: 5000 5000;
+                        normal-map: #mnrm;
+                        normal-texture-repeat: 5000 5000;
+                        roughness: 1
+                          "
+               scale="10000 10000 1"
+               position="0 0 0"
+               rotation="-90 0 0"
+               side="double">
+        </a-plane>
       <!-- in meters. right hand coordinate system -->
       <a-sphere
               src="#bg"
