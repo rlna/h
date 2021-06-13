@@ -17,7 +17,18 @@
       </a-assets>
 
       <a-sky src="#bg"></a-sky>
-      <a-plane color="#FFFFFF"
+      <a-plane material="color:#FFFFFF;
+                        src: #moss;
+                        repeat: 1 1;
+                        ambientocclusionmap: #mao;
+                        ambient-occlusion-texture-repeat: 1 1;
+                        displacement-map: #mdm;
+                        displacement-scale: 0.3;
+                        displacement-texture-repeat: 1 1;
+                        normal-map: #mnrm;
+                        normal-texture-repeat: 1 1;
+                        roughness: 1
+                          "
                position="0 0 0"
                rotation="-90 0 0"
                side="double">
