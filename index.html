@@ -4,6 +4,8 @@
     <title>experiment</title>
     <meta name="description" content="main site">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
   </head>
 
   <body>
@@ -15,6 +17,8 @@
         <img id="m_ao" src="moss_ao.jpg"/>
         <img id="m_dm" src="moss_height.jpg"/>
       </a-assets>
+
+      <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
 
       <a-sky src="#bg"></a-sky>
       <a-plane material="color:#FFFFFF;
@@ -34,51 +38,64 @@
                rotation="-90 0 0"
                side="double">
         </a-plane>
-      <!-- <a-plane material="color:#FFFFFF;
-                        src: #moss;
-                        repeat: 500 500;
-                        ambientocclusionmap: #mao;
-                        ambient-occlusion-texture-repeat: 500 500;
-                        displacement-map: #mdm;
-                        displacement-scale: 0.3;
-                        displacement-texture-repeat: 500 500;
-                        normal-map: #mnrm;
-                        normal-texture-repeat: 500 500;
-                        roughness: 1
-                          "
-               scale="1000 1000 1"
-               position="0 0 0"
-               rotation="-90 0 0"
-               side="double">
-        </a-plane> -->
+
       <!-- in meters. right hand coordinate system -->
-      <!-- <a-sphere
+      <a-sphere
               src="#bg"
               link="href: cc1.html;
                   title: My Homepage;
                   image: #bg"
               side="double"
               radius="3"
-              position="-6 1.5 -9"
+              position="-6 1 -15"
               event-set__enter="_event: mouseenter; color: #dbdbdb"
               event-set__leave="_event: mouseleave; color: #ffffff"
                 >
-      </a-sphere> -->
-        <!-- <a-sphere position="0 -34 0"
-                  radius="35"
-                  color="#EF2D5E"
-                  material=""
-                  shadow></a-sphere> -->
-    </a-scene>
-    <!-- <a-scene environment="preset: forest">
-      <a-assets>
-      </a-assets>
-      <a-entity id="stars" visible="true"></a-entity>
+      </a-sphere>
+      <a-sphere
+              src="#fh"
+              link="href: fh.html;
+                  title: My Homepage;
+                  image: #bg"
+              side="double"
+              radius="3"
+              position="6 1 -15"
+              event-set__enter="_event: mouseenter; color: #dbdbdb"
+              event-set__leave="_event: mouseleave; color: #ffffff"
+                >
+      </a-sphere>
+      <a-sphere
+              src="#fh"
+              link="href: fh.html;
+                  title: My Homepage;
+                  image: #bg"
+              side="double"
+              radius="3"
+              position="15 1 -8"
+              event-set__enter="_event: mouseenter; color: #dbdbdb"
+              event-set__leave="_event: mouseleave; color: #ffffff"
+                >
+      </a-sphere>
+      <a-sphere
+              src="#fh"
+              link="href: fh.html;
+                  title: My Homepage;
+                  image: #bg"
+              side="double"
+              radius="3"
+              position="-15 1 -8"
+              event-set__enter="_event: mouseenter; color: #dbdbdb"
+              event-set__leave="_event: mouseleave; color: #ffffff"
+                >
+      </a-sphere>
 
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
-      <a-plane position="0 0 -5" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4" shadow></a-plane>
-    </a-scene> -->
+      <a-plane scale="15 15 1"
+             position="0 0 15"
+             rotation="0 0 0"
+             side="double">
+      </a-plane>
+
+    </a-scene>
+
   </body>
 </html>
