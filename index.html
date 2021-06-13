@@ -66,48 +66,36 @@
       <a-video src="#sk"
              width="16"
              height="9"
-             position="0 8 12">
+             position="0 8 -12">
              <a-image id="videoControls"
                     src="#play"
                     position="0 -6 0"
                     scale="1.5 1.5 1"
                     play-pause>
              </a-image>
-             <a-text value="to portals"
-                    color="#FFFFFF"
-                    link="href: portals/portals.html"
-                    position="0 -7 0">
-             </a-text>
       </a-video>
-
-      <a-plane color="#FFFFFF"
-               scale="100 100 1"
-               position="0 0 0"
-               rotation="-90 0 0"
-               side="double">
-        </a-plane>
 
         <!-- in meters. right hand coordinate system -->
         <a-sphere
                 src="#cc1"
-                link="href: cc1.html;
+                link="href: portals/cc1.html;
                     title: My Homepage;
                     image: #cc1"
                 side="double"
                 radius="3"
-                position="-6 2 -15"
+                position="-6 4 15"
                 event-set__enter="_event: mouseenter; color: #dbdbdb"
                 event-set__leave="_event: mouseleave; color: #ffffff"
                   >
         </a-sphere>
         <a-sphere
                 src="#tp"
-                link="href: tp.html;
+                link="href: portals/tp.html;
                     title: My Homepage;
                     image: #tp"
                 side="double"
                 radius="3"
-                position="6 2 -15"
+                position="6 4 15"
                 event-set__enter="_event: mouseenter; color: #dbdbdb"
                 event-set__leave="_event: mouseleave; color: #ffffff"
                   >
@@ -119,25 +107,23 @@
                     image: #cow"
                 side="double"
                 radius="3"
-                position="15 2 -8"
+                position="15 4 8"
                 event-set__enter="_event: mouseenter; color: #dbdbdb"
                 event-set__leave="_event: mouseleave; color: #ffffff"
                   >
         </a-sphere>
         <a-sphere
                 src="#mt"
-                link="href: mt.html;
+                link="href: portals/mt.html;
                     title: My Homepage;
                     image: #mt"
                 side="double"
                 radius="3"
-                position="-15 2 -8"
+                position="-15 4 8"
                 event-set__enter="_event: mouseenter; color: #dbdbdb"
                 event-set__leave="_event: mouseleave; color: #ffffff"
                   >
         </a-sphere>
-
-
 
     </a-scene>
 
