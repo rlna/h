@@ -5,22 +5,39 @@
     <meta name="description" content="main site">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    <!-- script from https://www.youtube.com/watch?v=5KjyTU07EHo -->
+    <script>
+        AFRAME.registerComponent('play-pause', {
+          init: function() {
+            var myVideo = document.querySelector('#sk');
+            var videoControls = document.querySelector('#videoControls');
+            this.el.addEventListener('click', function () {
+              if (myVideo.paused) {
+                myVideo.play();
+                videoControls.setAttribute('src', '#pause');
+              } else {
+                myVideo.pause();
+                videoControls.setAttribute('src', '#play');
+              }
+            });
+          }
+        });
+      </script>
   </head>
 
   <body>
     <a-scene>
       <a-assets>
-        <img id="bg" src="portals/img/bg.jpg"/>
-        <img id="cc1" src="portals/img/scc1.jpg"/>
-        <img id="mt" src="portals/img/smt.jpg"/>
-        <img id="tp" src="portals/img/stp.jpg"/>
-        <img id="cow" src="portals/img/scow.jpg"/>
+        <img id="play" src="play.png"/>
+        <img id="pause" src="pause.png"/>
         <img id="moss" src="texture/moss.jpg"/>
         <img id="m_nrm" src="texture/moss_norm.jpg"/>
         <img id="m_ao" src="texture/moss_ao.jpg"/>
         <img id="m_dm" src="texture/moss_height.jpg"/>
         <video id="sk" src="sean.mp4"/>
       </a-assets>
+
+      <a-camera><a-cursor></a-cursor></a-camera>
 
       <a-sky src="#bg"></a-sky>
       <a-plane material="color:#FFFFFF;
@@ -37,7 +54,7 @@
                           "
                scale="100 100 1"
                position="0 0 0"
-               rotation="0 0 0"
+               rotation="-90 0 0"
                side="double">
         </a-plane>
 
@@ -45,7 +62,11 @@
              width="16"
              height="9"
              position="0 0 -20">
+             <a-image id="videoControls" src="#play" position="0 -3 0" scale="0.5 0.5 1" play-pause>
+             </a-image>
       </a-video>
+
+
 
     </a-scene>
 
