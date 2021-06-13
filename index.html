@@ -39,6 +39,9 @@
                rotation="-90 0 0"
                side="double">
         </a-plane>
+        
+        <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity>
+
 
       <!-- in meters. right hand coordinate system -->
       <a-sphere
@@ -48,43 +51,43 @@
                   image: #bg"
               side="double"
               radius="3"
-              position="-6 1 -15"
+              position="-6 2 -15"
               event-set__enter="_event: mouseenter; color: #dbdbdb"
               event-set__leave="_event: mouseleave; color: #ffffff"
                 >
       </a-sphere>
       <a-sphere
               src="#tp"
-              link="href: fh.html;
+              link="href: places/tp.html;
                   title: My Homepage;
                   image: #bg"
               side="double"
               radius="3"
-              position="6 1 -15"
+              position="6 2 -15"
               event-set__enter="_event: mouseenter; color: #dbdbdb"
               event-set__leave="_event: mouseleave; color: #ffffff"
                 >
       </a-sphere>
       <a-sphere
               src="#cow"
-              link="href: fh.html;
+              link="href: places/cow.html;
                   title: My Homepage;
                   image: #bg"
               side="double"
               radius="3"
-              position="15 1 -8"
+              position="15 2 -8"
               event-set__enter="_event: mouseenter; color: #dbdbdb"
               event-set__leave="_event: mouseleave; color: #ffffff"
                 >
       </a-sphere>
       <a-sphere
               src="#mt"
-              link="href: fh.html;
+              link="href: places/mt.html;
                   title: My Homepage;
                   image: #bg"
               side="double"
               radius="3"
-              position="-15 1 -8"
+              position="-15 2 -8"
               event-set__enter="_event: mouseenter; color: #dbdbdb"
               event-set__leave="_event: mouseleave; color: #ffffff"
                 >
